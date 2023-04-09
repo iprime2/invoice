@@ -1,0 +1,247 @@
+.invoice {
+  width: 60%;
+  padding: 20px 20px;
+  background-color: azure;
+  margin: auto;
+  height: 100vh;
+
+  .topLevel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .one {
+      width: 20%;
+      font-weight: 600;
+    }
+
+    .two {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .three {
+      width: 20%;
+    }
+  }
+
+  .levelOne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      flex: 1;
+      font-size: 80px;
+      font-weight: 700;
+      height: 110px;
+      padding: 5px;
+
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    .center {
+      flex: 3;
+      height: 110px;
+      font-size: 16px;
+      justify-content: center;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      span {
+        margin: auto;
+      }
+    }
+
+    .right {
+      padding: 5px;
+      height: 110px;
+      font-weight: bold;
+      font-size: 45px;
+      flex: 1;
+    }
+  }
+
+  .levelTwo {
+    .levelTwoLeft {
+      display: flex;
+      align-items: center;
+
+      .levelTwoLeftTop {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
+        .items {
+          display: flex;
+          .title {
+            width: 130px;
+            font-weight: 500;
+          }
+
+          .info {
+            margin-left: 15px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .levelTwoLeftRight {
+        display: flex;
+        flex-direction: column;
+
+        .items {
+          display: flex;
+          align-items: center;
+
+          .title {
+            width: 120px;
+            font-weight: 500;
+          }
+
+          .info {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .levelThree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .levelThreeTitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        padding: 5px;
+        font-size: 14px;
+        border: 3px solid black;
+        height: 55px;
+        width: 30%;
+        font-weight: bold;
+      }
+    }
+
+    .levelThreeInfo {
+      display: flex;
+      align-items: end;
+      width: 100%;
+
+      span {
+        padding: 5px;
+        font-size: 14px;
+        height: 55px;
+        width: 40%;
+      }
+    }
+
+    .levelThreeSubTotal {
+      display: flex;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      width: 100%;
+
+      h5 {
+        width: 70%;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        width: 7.5%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+      }
+    }
+  }
+
+  .levelFour {
+    display: flex;
+    flex-direction: column;
+
+    .items {
+      display: flex;
+
+      .itemTitle {
+        width: 280px;
+        font-weight: 700;
+      }
+
+      .itemInfo {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .levelFive {
+    display: flex;
+    align-items: center;
+
+    .levelFiveLeft {
+      display: flex;
+      flex-direction: column;
+
+      .termsHeader {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .termsInfo {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .levelFiveRight {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 50%;
+
+      .levelFiveRightTop {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .levelFiveRightBottom {
+        font-weight: 700;
+        font-size: 20px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    color: white;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
