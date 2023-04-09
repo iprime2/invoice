@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import DataForm from '../../components/DataForm/DataForm'
 import DataTable from '../../components/DataTable/DataTable'
 import Papa from 'papaparse'
-import { Link } from 'react-router-dom'
 import './home.scss'
 
 const Home = ({ invoiceArray, setInvoiceArray }) => {
@@ -27,10 +26,6 @@ const Home = ({ invoiceArray, setInvoiceArray }) => {
         data={data}
       />
       <DataTable invoiceArray={invoiceArray} />
-
-      <Link to='/invoice'>
-        <button>Generate Invoice</button>
-      </Link>
     </div>
   )
 }

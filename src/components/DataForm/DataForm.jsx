@@ -72,97 +72,98 @@ const DataForm = ({ data, invoiceArray, setInvoiceArray }) => {
 
   return (
     <div className='form'>
-      <div className='formInputItem'>
-        <span>Invoice Number</span>
-        <input
-          type='number'
-          placeholder='enter invoice number'
-          onChange={handleInput}
-          name='invoiceNo'
-        />
-      </div>
-      <div className='formInputItem'>
-        <span>Date</span>
-        <input
-          type='text'
-          placeholder='enter invoice Date'
-          onChange={handleInput}
-          name='date'
-        />
-      </div>
+      <div className='wrapper'>
+        <div className='formInputItem'>
+          <span>Invoice Number</span>
+          <input
+            type='number'
+            placeholder='enter invoice number'
+            onChange={handleInput}
+            name='invoiceNo'
+          />
+        </div>
+        <div className='formInputItem'>
+          <span>Date</span>
+          <input
+            type='text'
+            placeholder='enter invoice Date'
+            onChange={handleInput}
+            name='date'
+          />
+        </div>
 
-      <div className='formInputItem'>
-        <span>Customer name</span>
-        <input
-          type='text'
-          placeholder='enter customer name'
-          onChange={handleInput}
-          name='name'
-        />
-      </div>
-      <div className='formInputItem'>
-        <span>Customer Address</span>
-        <input
-          type='text'
-          placeholder='enter address'
-          onChange={handleInput}
-          name='address'
-        />
-      </div>
-      <div className='formInputItem'>
-        <span>Customer Mobile no</span>
-        <input
-          type='number'
-          placeholder='enter customer mobile no '
-          onChange={handleInput}
-          name='mobile'
-        />
-      </div>
-      <div className='formInputItem'>
-        <span>GSTIN</span>
-        <input
-          type='text'
-          placeholder='enter GSTIN'
-          onChange={handleInput}
-          name='gstin'
-        />
-      </div>
+        <div className='formInputItem'>
+          <span>Customer name</span>
+          <input
+            type='text'
+            placeholder='enter customer name'
+            onChange={handleInput}
+            name='name'
+          />
+        </div>
+        <div className='formInputItem'>
+          <span>Customer Address</span>
+          <input
+            type='text'
+            placeholder='enter address'
+            onChange={handleInput}
+            name='address'
+          />
+        </div>
+        <div className='formInputItem'>
+          <span>Customer Mobile no</span>
+          <input
+            type='number'
+            placeholder='enter customer mobile no '
+            onChange={handleInput}
+            name='mobile'
+          />
+        </div>
+        <div className='formInputItem'>
+          <span>GSTIN</span>
+          <input
+            type='text'
+            placeholder='enter GSTIN'
+            onChange={handleInput}
+            name='gstin'
+          />
+        </div>
 
-      <div className='formInputItem'>
-        <span>Product Name</span>
-        <select
-          name='product'
-          id=''
-          onChange={handleInput}
-          className='inputOption'
-        >
-          {data?.map((item, index) => (
-            <option name='product' value={item[0]}>
-              {item[0]}
-            </option>
-          ))}
-        </select>
-      </div>
+        <div className='formInputItem'>
+          <span>Product Name</span>
+          <select
+            name='product'
+            id=''
+            onChange={handleInput}
+            className='inputOption'
+          >
+            {data?.map((item, index) => (
+              <option name='product' value={item[0]}>
+                {item[0]}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <div className='formInputItem'>
-        <span>Product QTY</span>
-        <input
-          type='number'
-          placeholder='enter product qty'
-          onChange={handleInput}
-          name='qty'
-        />
+        <div className='formInputItem'>
+          <span>Product QTY</span>
+          <input
+            type='number'
+            placeholder='enter product qty'
+            onChange={handleInput}
+            name='qty'
+          />
+        </div>
+        <div className='formInputItem'>
+          <span>Discount</span>
+          <input
+            type='number'
+            placeholder='enter discount'
+            onChange={handleInput}
+            name='discount'
+          />
+        </div>
       </div>
-      <div className='formInputItem'>
-        <span>Discount</span>
-        <input
-          type='number'
-          placeholder='enter discount'
-          onChange={handleInput}
-          name='discount'
-        />
-      </div>
-
       <button onClick={handleSubmit}> Submit</button>
     </div>
   )

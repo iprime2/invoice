@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './invoice.scss'
 
 import React from 'react'
 
 const Invoice = ({ invoiceArray }) => {
+  const location = useLocation()
+  const { state } = location
+  const { taxableFinal, cgst, sgst, totalAmount } = state
+
   const ccyFormat = (num) => {
     if (!num) {
       return
@@ -145,10 +149,10 @@ const Invoice = ({ invoiceArray }) => {
 
             <div className='levelThreeSubTotal'>
               <h5>SUBTOTAL</h5>
-              <span>100.00</span>
-              <span>5900.00</span>
-              <span>47.50</span>
-              <span>47.50</span>
+              <span>{ccyFormat(taxableFinal)}</span>
+              <span>{ccyFormat(cgst)}</span>
+              <span>{ccyFormat(sgst)}</span>
+              <span>{ccyFormat(totalAmount)}</span>
             </div>
           </div>
           <br />

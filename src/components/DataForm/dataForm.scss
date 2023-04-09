@@ -1,51 +1,57 @@
 .form {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 500px;
+  width: 80%;
   height: auto;
   padding: 30px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(188, 188, 188);
+  background-color: rgb(114, 180, 64);
   border-radius: 15px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  color: white;
 
-  .formInputItem {
-    width: 100%;
+  .wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
 
-    span {
-      width: 50%;
-      font-weight: 500;
-      margin-right: 20px;
-    }
+    .formInputItem {
+      width: 400px;
+      margin-top: 10px;
+      flex: 1 1 350px;
+      display: flex;
+      flex-direction: column;
 
-    input {
-      width: 50%;
-      padding: 5px 10px;
-      height: 20px;
-      border-radius: 5px;
-      border: none;
-
-      &:focus {
-        outline: none;
+      span {
+        width: 50%;
+        font-weight: 500;
+        margin-right: 20px;
       }
-    }
 
-    .inputOption {
-      width: 54%;
-      padding: 5px 10px;
-      height: 30px;
-      border-radius: 5px;
-      border: none;
-      font-size: 12px;
+      input {
+        width: 50%;
+        padding: 5px 10px;
+        height: 20px;
+        border-radius: 5px;
+        border: none;
 
-      &:focus {
-        outline: none;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .inputOption {
+        width: 54%;
+        padding: 5px 10px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        font-size: 12px;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
